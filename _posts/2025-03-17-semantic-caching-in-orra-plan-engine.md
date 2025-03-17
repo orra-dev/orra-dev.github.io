@@ -10,18 +10,28 @@ tags: [caching, LLM, orchestration, vector-similarity, performance-optimization]
 
 In this technical deep dive, we'll explore how orra's Plan Engine implements an intelligent caching system that goes beyond simple key-value lookups. We'll examine the architecture, design decisions, and technical challenges involved in creating a semantic caching layer for LLM-generated execution plans.
 
-When we first built orra's orchestration system, we quickly encountered a challenge that's common in LLM-powered applications: while LLMs provide powerful dynamic orchestration capabilities, they also introduce significant latency and cost overhead. As request volumes increased in production environments, we found that many actions were semantically similar or functionally equivalent, yet each one triggered a full, expensive LLM call. This created both performance bottlenecks and unpredictable scaling costs.
+When we first built orra's orchestration system, we quickly encountered a challenge that's common in LLM-powered applications: while LLMs provide powerful dynamic orchestration capabilities, they also introduce significant latency and cost overhead.
 
-Traditional caching approaches didn't work well for this problem. Exact string matching was too brittle for natural language inputs, and simple parameter templating couldn't handle the flexibility needed for a general-purpose orchestration system. We needed something more sophisticated.
+As request volumes increased in production environments, we found that many actions were semantically similar or functionally equivalent, yet each one triggered a full, expensive LLM call.
 
-The core challenge we'll address is how to recognise when different user requests are functionally equivalent despite textual differences, and how to efficiently adapt cached plans to work with new parameters. This involves solving several technical problems:
+This created both performance bottlenecks and unpredictable scaling costs.
+
+**Traditional caching approaches didn't work well for this problem.**
+
+Exact string matching was too brittle for natural language inputs, and simple parameter templating couldn't handle the flexibility needed for a general-purpose orchestration system. We needed something more sophisticated.
+
+The core challenge we'll address is how to recognise when different user requests are functionally equivalent despite textual differences, and how to efficiently adapt cached plans to work with new parameters.
+
+This involves solving several technical problems:
 
 1. How to detect semantic similarity between different action statements
 2. How to efficiently map parameters between actions and execution plans
 3. How to adapt cached plans to work with new parameter values
 4. How to manage the cache reliably in a production environment
 
-> The approaches described here aren't just specific to orra – they can inform your own work when building LLM-powered applications. As developers increasingly incorporate LLMs into production systems, techniques for semantic caching, dynamic parameter substitution, and vector similarity can be applied to reduce costs, improve response times, and enhance user experiences across many different contexts.
+> The approaches described here aren't just specific to orra – they can inform your own work when building LLM-powered applications.
+
+> As LLMs are incorporated into production systems, techniques for semantic caching, dynamic parameter substitution, and vector similarity can be applied to reduce costs, improve response times, and enhance user experiences across many different contexts.
 
 By the end of this article, you'll understand the inner workings of orra's caching system, the tradeoffs involved in its design, and how these principles can be applied to significantly improve both performance and cost-efficiency in your own LLM-powered applications.
 
