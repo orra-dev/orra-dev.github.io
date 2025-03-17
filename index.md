@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # 🪡 The orra Engineering Blog
 
 Welcome to our engineering blog – a collection of technical deep dives into the challenges we're solving while building [orra](https://github.com/orra-dev/orra).
