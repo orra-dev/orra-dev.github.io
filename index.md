@@ -12,4 +12,4 @@ No fluff, just engineering insights for builders who appreciate the details.
 
 ## Latest Posts
 
-- [Beyond Simple Lookups: Semantic Caching in orra's Plan Engine](/_posts/2025-03-17-semantic-caching-in-orra-plan-engine.md)
+- [Semantic Caching for LLM Execution Plans: How We Cut Costs by 90%](/_posts/2025-03-17-semantic-caching-in-orra-plan-engine.md)

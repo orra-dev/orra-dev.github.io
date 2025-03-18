@@ -6,7 +6,7 @@ description: "A technical deep dive into how orra's Plan Engine uses semantic ca
 tags: [caching, LLM, orchestration, vector-similarity, performance-optimization]
 ---
 
-# Beyond Simple Lookups: Semantic Caching in orra's Plan Engine
+# Semantic Caching for LLM Execution Plans: How We Cut Costs by 90%
 
 In this technical deep dive, we'll explore how orra's Plan Engine implements an intelligent caching system that goes beyond simple key-value lookups. We'll examine the architecture, design decisions, and technical challenges involved in creating a semantic caching layer for LLM-generated execution plans.
 
