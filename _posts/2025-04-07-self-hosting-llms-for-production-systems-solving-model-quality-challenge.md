@@ -57,7 +57,7 @@ In the end we decided to support both **Qwen/QwQ-32B** and **DeepSeek-R1** for s
 Our solution to reliable self-hosted orchestration involves two key elements: a universal interface standard and robust
 validation to ensure execution plan quality across models.
 
-![self-hosted models orra setup](/_posts/images/self-hosted-models-orra.png)
+![self-hosted models orra setup]({{ site.baseurl }}/assets/images/self-hosted-models-orra.png)
 
 ### OpenAI-compatible API: The Universal Interface
 
