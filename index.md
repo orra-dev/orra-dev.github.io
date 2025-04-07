@@ -12,4 +12,6 @@ No fluff, just engineering insights for builders who appreciate the details.
 
 ## Latest Posts
 
+- [Self-hosting LLMs for Production Systems: Solving the Model Quality Challenge](/_posts/2025-04-07-self-hosting-llms-for-production-systems-solving-model-quality-challenge.md)
+
 - [Semantic Caching for LLM Execution Plans: How We Cut Costs by 90%](/_posts/2025-03-17-semantic-caching-in-orra-plan-engine.md)
